@@ -19,6 +19,7 @@ class Trick < ActiveRecord::Base
   validates :title, uniqueness: { case_sensitive: true }
 
   def self.import(file)
+  	return if file.nil?
   	f = open_file file
   	header = f.row(1)
 

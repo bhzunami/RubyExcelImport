@@ -53,6 +53,14 @@ class TricksController < ApplicationController
     end
   end
 
+
+  # POST /tricks/import
+  # POST /tricks/import.json
+  def import
+    Trick.import params[:file]
+    redirect_to root_path, notice: "Imported!!"
+  end
+
   # PUT /tricks/1
   # PUT /tricks/1.json
   def update

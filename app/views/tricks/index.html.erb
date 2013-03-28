@@ -1,5 +1,10 @@
 <h1>Listing tricks</h1>
 
+<%= form_tag import_tricks_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+<% end %>
+
 <table>
   <tr>
     <th>Title</th>

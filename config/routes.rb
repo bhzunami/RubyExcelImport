@@ -1,5 +1,11 @@
 RubyExcelImport::Application.routes.draw do
-  resources :tricks
+  resources :tricks do
+    collection do
+      post :import
+    end
+  end
+
+  root to: 'tricks#index'
 
 
   # The priority is based upon order of creation:

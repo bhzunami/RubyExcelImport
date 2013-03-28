@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @trick.title %>
+</p>
+
+<p>
+  <b>Problem:</b>
+  <%= @trick.problem %>
+</p>
+
+<p>
+  <b>Solution:</b>
+  <%= @trick.solution %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @trick.author %>
+</p>
+
+<p>
+  <b>Solved by:</b>
+  <%= @trick.solved_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_trick_path(@trick) %> |
+<%= link_to 'Back', tricks_path %>

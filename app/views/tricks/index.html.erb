@@ -1,0 +1,31 @@
+<h1>Listing tricks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Problem</th>
+    <th>Solution</th>
+    <th>Author</th>
+    <th>Solved by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tricks.each do |trick| %>
+  <tr>
+    <td><%= trick.title %></td>
+    <td><%= trick.problem %></td>
+    <td><%= trick.solution %></td>
+    <td><%= trick.author %></td>
+    <td><%= trick.solved_by %></td>
+    <td><%= link_to 'Show', trick %></td>
+    <td><%= link_to 'Edit', edit_trick_path(trick) %></td>
+    <td><%= link_to 'Destroy', trick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trick', new_trick_path %>
